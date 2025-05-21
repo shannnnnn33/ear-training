@@ -1,56 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>听力练习系统</title>
+  <meta charset="UTF-8" />
+  <title>Welcome</title>
   <style>
     body {
       font-family: "PingFang SC", sans-serif;
       text-align: center;
       background-color: #f0f0f0;
-      padding: 100px;
+      padding: 80px;
     }
-
     h1 {
-      font-size: 3em;
+      font-size: 2.4em;
       margin-bottom: 20px;
     }
-
-    h2 {
-      font-size: 2em;
-      margin-bottom: 40px;
-    }
-
-    .btn-container {
+    #name-section {
       display: flex;
       justify-content: center;
-      gap: 60px;
+      align-items: center;
+      margin-bottom: 30px;
     }
-
-    .btn {
+    #name-input {
+      font-size: 1.8em;
+      padding: 15px;
+      width: 250px;
+      text-align: center;
+    }
+    #confirm-btn {
+      font-size: 2em;
+      margin-left: 10px;
+      border: none;
+      background-color: transparent;
+      color: black;
+      cursor: pointer;
+    }
+    #confirm-btn:hover {
+      color: #0077cc;
+    }
+    #choices {
+      display: none;
+      margin-top: 40px;
+    }
+    #choices h2 {
+      font-size: 2.4em;
+      margin-bottom: 30px;
+    }
+    .choice-btn {
       font-size: 2em;
       padding: 20px 60px;
+      margin: 30px;
       border-radius: 15px;
       border: none;
-      background-color: #0077cc;
       color: white;
       cursor: pointer;
       transition: 0.3s;
     }
-
-    .btn:hover {
-      background-color: #005fa3;
-      transform: scale(1.05);
+    .tone-btn {
+      background-color: #2196f3;
+    }
+    .tone-btn:hover {
+      background-color: #1976d2;
+    }
+    .sib-btn {
+      background-color: #f57c00;
+    }
+    .sib-btn:hover {
+      background-color: #ef6c00;
     }
   </style>
 </head>
 <body>
-  <h1>🎧 欢迎来到听力练习</h1>
-  <h2>你想练习什么？</h2>
-
-  <div class="btn-container">
-    <button class="btn" onclick="location.href='tone.html'">声调练习</button>
-    <button class="btn" onclick="location.href='sib.html'">声母练习</button>
+  <div id="name-section">
+    <input type="text" id="name-input" placeholder="Name" />
+    <button id="confirm-btn" onclick="showChoices()">✅</button>
   </div>
+  <h1>🎧 Welcome to the Listening Practice</h1>
+
+  <div id="choices">
+    <h2>What would you like to practice?</h2>
+    <button class="choice-btn tone-btn" onclick="goTo('tone')">shengdiao</button>
+    <button class="choice-btn sib-btn" onclick="goTo('sib')">shengmu</button>
+  </div>
+
+  <script>
+    function showChoices() {
+      const name = document.getElementById("name-input").value.trim();
+      if (!name) {
+        alert("Please enter your name first.");
+        return;
+      }
+      sessionStorage.setItem("username", name);
+      document.getElementById("choices").style.display = "block";
+    }
+
+    function goTo(type) {
+      if (type === "tone") {
+        location.href = "tone.html";
+      } else {
+        location.href = "sib.html";
+      }
+    }
+  </script>
 </body>
 </html>
