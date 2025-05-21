@@ -10,10 +10,6 @@
       background-color: #f5f5f5;
       padding: 50px;
     }
-    h1 {
-      font-size: 2.2em;
-      margin-bottom: 30px;
-    }
     #question {
       font-size: 2.6em;
       margin: 30px 0 20px 0;
@@ -93,22 +89,30 @@
     let questions = [];
     let current = 0;
     let username = sessionStorage.getItem("username") || "";
+    if (!username) {
+      username = prompt("Enter your name:");
+      if (!username) {
+        alert("No username provided. Returning to homepage.");
+        location.href = "index.html";
+      } else {
+        sessionStorage.setItem("username", username);
+      }
+    }
+
     let responseStart = 0;
     let logData = [];
     let wrongQueue = [];
 
-    if (!username) {
-      alert("No username found. Please go back to the homepage.");
-      location.href = "index.html";
-    }
-
     fetch(jsonFile)
       .then(res => res.json())
       .then(data => {
-        const allQuestions = data.filter(q => q.round === round);
-        const chunkSize = Math.ceil(allQuestions.length / 6);
-        questions = allQuestions.slice(0, chunkSize);
-        showQuestion();
+        questions = data.filter(q => Number(q.round) === round);
+        if (questions.length === 0) {
+          alert(`No questions found for Round ${round}.`);
+          location.href = type === "tone" ? "tone.html" : "sib.html";
+        } else {
+          showQuestion();
+        }
       });
 
     function playAudioTwice(audioElement) {
@@ -136,7 +140,7 @@
       const feedbackDiv = document.getElementById("feedback");
       const doneDiv = document.getElementById("done-message");
 
-      audioElement.src = "audio/" + q.audio;
+      audioElement.src = "audio/" + q.audio_file;
       document.getElementById("question").innerText = `🎧 Question ${current + 1}`;
       optionsDiv.innerHTML = "";
       feedbackDiv.innerText = "";
@@ -144,7 +148,10 @@
 
       playAudioTwice(audioElement);
 
-      q.options.forEach(opt => {
+      const optionArray = [q.option1, q.option2, q.option3, q.option4, q.option5]
+        .filter(opt => opt !== null && opt !== undefined && !Number.isNaN(opt));
+
+      optionArray.forEach(opt => {
         const btn = document.createElement("button");
         btn.innerText = opt;
         btn.onclick = () => {
@@ -156,7 +163,7 @@
             username: username,
             type: type,
             round: round,
-            item: q.audio,
+            item: q.audio_file,
             answer: q.answer,
             chosen: opt,
             correct: isCorrect ? 1 : 0,
@@ -199,13 +206,13 @@
     }
 
     function addDownloadButton() {
-      if (document.getElementById("downloaded")) return; // prevent duplicates
+      if (document.getElementById("downloaded")) return;
 
       const btn = document.createElement("button");
       btn.innerText = "📥 Download Results";
       btn.id = "downloaded";
       btn.onclick = () => {
-        const header = ["username","type","round","item","answer","chosen","correct","rt_ms"];
+        const header = ["username", "type", "round", "item", "answer", "chosen", "correct", "rt_ms"];
         const rows = logData.map(obj => header.map(h => obj[h]));
         const csv = [header.join(",")].concat(rows.map(r => r.join(","))).join("\n");
         const blob = new Blob([csv], { type: 'text/csv' });
