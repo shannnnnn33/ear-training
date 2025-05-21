@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;听力训练&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: "PingFang SC", sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #f5f5f5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 2.2em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#name-section {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#name-input {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 1.5em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 300px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#start-btn, #download-btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 1.5em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #0077cc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#question {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 2.8em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 30px 0 20px 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#audio-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#audio {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: scale(1.8);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#options {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#options button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 2.2em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 3px solid #888;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #e6e6e6;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 2px 2px 6px rgba(0,0,0,0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#options button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #d0d0d0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: scale(1.07);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#feedback {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 2em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#done-message {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 2.6em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #0077cc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h1&gt;🎧 练习开始&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="name-section"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="name-input" placeholder="请输入你的姓名"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button id="start-btn" onclick="startTraining()"&gt;开始训练&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="question"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="audio-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;audio id="audio" controls&gt;&lt;/audio&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="options"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="feedback"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="done-message"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="download"&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const urlParams = new URLSearchParams(window.location.search);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const type = urlParams.get("type");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const round = parseInt(urlParams.get("round"));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const jsonFile = type === "tone" ? "tone_data.json" : "sib_data.json";</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let questions = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let current = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let username = "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let responseStart = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let logData = [];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function startTraining() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const nameInput = document.getElementById("name-input").value.trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (!nameInput) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>alert("请输入姓名再开始训练。");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>username = nameInput;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById("name-section").style.display = "none";</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>fetch(jsonFile)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.then(res =&gt; res.json())</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.then(data =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>questions = data.filter(q =&gt; q.round === round);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>showQuestion();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function playAudioThreeTimes(audioElement) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let playCount = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>function playOnce() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (playCount &lt; 3) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>audioElement.play();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>playCount++;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>audioElement.onended = () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (playCount &lt; 3) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>setTimeout(playOnce, 300);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>responseStart = performance.now();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>playOnce();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function showQuestion() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const q = questions[current];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const audioElement = document.getElementById("audio");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const optionsDiv = document.getElementById("options");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const feedbackDiv = document.getElementById("feedback");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const doneDiv = document.getElementById("done-message");</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>audioElement.src = "audio/" + q.audio;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById("question").innerText = username + "，📢 第 " + (current + 1) + " 题";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>optionsDiv.innerHTML = "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>feedbackDiv.innerText = "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>doneDiv.innerText = "";</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>playAudioThreeTimes(audioElement);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>q.options.forEach(opt =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const btn = document.createElement("button");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>btn.innerText = opt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>btn.onclick = () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const responseEnd = performance.now();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const rt = Math.round(responseEnd - responseStart);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const isCorrect = opt === q.answer;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>logData.push({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>username: username,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>type: type,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>round: round,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>item: q.audio,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>answer: q.answer,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>chosen: opt,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>correct: isCorrect ? 1 : 0,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>rt_ms: rt</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (isCorrect) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>feedbackDiv.innerText = "✅ 正确！";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>feedbackDiv.style.color = "#2e7d32";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>current++;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>if (current &lt; questions.length) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showQuestion();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>feedbackDiv.innerText = "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>optionsDiv.innerHTML = "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById("question").innerText = "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>doneDiv.innerText = "🌟 真棒！你完成了练习，" + username + "！";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>addDownloadButton();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}, 2000);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>feedbackDiv.innerText = "❌ 错了。再听一遍试试看~";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>feedbackDiv.style.color = "#c62828";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>feedbackDiv.innerText = "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>showQuestion();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}, 2000);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>optionsDiv.appendChild(btn);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function addDownloadButton() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const btn = document.createElement("button");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>btn.id = "download-btn";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>btn.innerText = "📥 下载成绩记录";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>btn.onclick = () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const header = ["username","type","round","item","answer","chosen","correct","rt_ms"];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const rows = logData.map(obj =&gt; header.map(h =&gt; obj[h]));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const csv = [header.join(",")].concat(rows.map(r =&gt; r.join(","))).join("\n");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const blob = new Blob([csv], { type: 'text/csv' });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const a = document.createElement('a');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>a.href = URL.createObjectURL(blob);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>a.download = `${username}_${type}_round${round}.csv`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>a.click();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById("download").appendChild(btn);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>

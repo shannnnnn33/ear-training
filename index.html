@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>听力练习系统</title>
+  <style>
+    body {
+      font-family: "PingFang SC", sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 100px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .btn {
+      font-size: 2em;
+      padding: 20px 60px;
+      border-radius: 15px;
+      border: none;
+      background-color: #0077cc;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎧 欢迎来到听力练习</h1>
+  <h2>你想练习什么？</h2>
+
+  <div class="btn-container">
+    <button class="btn" onclick="location.href='tone.html'">声调练习</button>
+    <button class="btn" onclick="location.href='sib.html'">声母练习</button>
+  </div>
+</body>
+</html>
